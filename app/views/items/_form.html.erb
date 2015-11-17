@@ -1,0 +1,21 @@
+<%= form_for :item, url: {action: "create"} do|f|%>
+	<p>
+		<%= f.label :Title%>
+		<%= f.text_field :title%>
+	</p>
+
+	<p>
+		<%= f.label :Cuisine%>
+		<%= f.text_field :Cuisine%>
+	</p>
+
+	<p>
+		<%= f.label :Description%>
+		<%= f.text_area :description%>
+	</p>
+	<p>
+		<%= f.label :Price%>
+		<%= f.text_field :price%>
+	</p>
+<%= submit_tag ("Submit")%>
+<%end%>
