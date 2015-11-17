@@ -1,2 +1,21 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<%= image_tag @item.avatar_url%>
+<p>
+  <strong>Title:</strong>
+  <%= @item.title %>
+</p>
+
+<p>
+  <strong>Cuisine:</strong>
+  <%= @item.Cuisine %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @item.price %>
+</p>
+<%= link_to 'Home', items_path%>

@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to items_path
+      redirect_to @item
     end
   end
 
@@ -27,9 +27,13 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @item = Item.find(params[:id])
+    if @item.destroy 
+      redirect_to items_path
+    end
   end
   private
   def item_params
-    params.require(:item).permit(:title, :Cuisine, :description, :price)
+    params.require(:item).permit(:title, :Cuisine, :description, :price, :avatar)
   end
 end

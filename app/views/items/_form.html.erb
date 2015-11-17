@@ -1,4 +1,4 @@
-<%= form_for :item, url: {action: "create"} do|f|%>
+<%= form_for :item, url: {action: "create"}, :html => {:multipart => true} do|f|%>
 	<p>
 		<%= f.label :Title%>
 		<%= f.text_field :title%>
@@ -17,5 +17,9 @@
 		<%= f.label :Price%>
 		<%= f.text_field :price%>
 	</p>
-<%= submit_tag ("Submit")%>
+	<p>
+		<%= f.label :Image%>
+		<%= f.file_field :avatar%>
+	</p>
+	<p><%= submit_tag ("Submit")%></p>
 <%end%>
