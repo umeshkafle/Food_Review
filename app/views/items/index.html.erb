@@ -1,6 +1,6 @@
 <h4>Add your items here</h4>
 <% @items.each do |item|%>
-		<%= image_tag item.avatar_url%>
+		<%= image_tag item.avatar_url(:thumb)%>
 		<strong>Title:</strong> <%= item.title%></br>
 		<strong>Cuisine:</strong> <%= item.Cuisine%></br>
 		<strong>Description:</strong> <%= item.description%></br>

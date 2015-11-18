@@ -45,5 +45,6 @@ group :development do
   gem 'spring'
   gem 'devise', '~> 3.5', '>= 3.5.2'
   gem 'carrierwave', '~> 0.10.0'
+  gem 'rmagick', '~> 2.15', '>= 2.15.2'
 end
 
