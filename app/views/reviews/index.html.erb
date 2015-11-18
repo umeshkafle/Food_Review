@@ -1,0 +1,5 @@
+<%= @reviews.each do |review|%>
+	<strong>Rating:</strong><%= review.rating%>
+	<strong>Comment:</strong><%= review.comment%>
+	<%= submit_tag ('post')%>
+<%end%>

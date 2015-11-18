@@ -1,0 +1,11 @@
+<%= form_for :review, url:{action: 'create'} do |f|%>
+	<p>
+		<%= f.label :Rating%>
+		<%= f.text_field :rating%>
+	</p>
+	<p>
+		<%= f.label :Comment%>
+		<%= f.text_area :comment%>
+	</p>
+	<%= submit_tag("submit")%>
+<%end%>

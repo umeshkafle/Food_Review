@@ -1,11 +1,12 @@
 <h4>Add your items here</h4>
 <% @items.each do |item|%>
-		<%= image_tag item.avatar_url(:thumb)%>
+		<%= image_tag item.avatar_url, size:'150x150' %></br></br>
 		<strong>Title:</strong> <%= item.title%></br>
 		<strong>Cuisine:</strong> <%= item.Cuisine%></br>
 		<strong>Description:</strong> <%= item.description%></br>
-		<strong>Price:</strong> <%= item.price%><br/><br/>
+		<strong>Price:</strong> <%= item.price%>
 		<%= link_to "Delete", item_path(item.id), method: :delete, data:{confirm: "Are you sure?"}%>
+		<%= link_to 'Rating', new_item_review_path(item)%>
 <%end%>
 
 <%= link_to 'Add Items', new_item_path %>
