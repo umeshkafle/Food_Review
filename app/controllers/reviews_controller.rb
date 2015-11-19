@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
     @item = Item.find(params[:item_id])
     @review = @item.reviews.new(reviews_params)
     if @item.save
-      redirect_to item_review(item_id)
+      redirect_to items_path
     end
   end
 

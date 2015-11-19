@@ -1,5 +1,6 @@
 <%= @reviews.each do |review|%>
-	<strong>Rating:</strong><%= review.rating%>
-	<strong>Comment:</strong><%= review.comment%>
-	<%= submit_tag ('post')%>
+	<strong>Rating:</strong><%= review.rating%></br>
+	<strong>Comment:</strong><%= review.comment%></br>
 <%end%>
+<%= link_to 'add review', new_item_review_path%></br>
+<%= link_to 'home', items_path%>
